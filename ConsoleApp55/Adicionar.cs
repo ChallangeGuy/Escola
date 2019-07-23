@@ -8,7 +8,8 @@ namespace ConsoleApp55
 {
     class Adicionar
     {
-        public bool addAluno()
+        private List<Aluno> listaAluno = new List<Aluno>();
+        public void addAluno()
         {
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
@@ -21,7 +22,7 @@ namespace ConsoleApp55
             Console.Write("Nota: ");
             int nota = int.Parse(Console.ReadLine());
             Aluno a = new Aluno(nome, cpf, dataNascimento, endereco, nota);
-            return true;
+            listaAluno.Add(a);
         }
     }
 }

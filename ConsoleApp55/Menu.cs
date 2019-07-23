@@ -40,16 +40,18 @@ namespace ConsoleApp55
             {
                 case 1:
                     //adiciona aluno
+                    Adicionar adc = new Adicionar();
+                    int contador = 0;
                     while (opcao != 0)
                     {
-                        Adicionar adc = new Adicionar();
                         Console.Clear();
                         adc.addAluno();
-                        List<Aluno> listaAluno = new List<Aluno>();
                         Console.Clear();
                         Console.WriteLine("Deseja adicionar mais um aluno?\n[1] para Sim\n[0] para Não");
                         opcao = int.Parse(Console.ReadLine());
+                        contador++;
                     }
+                    Console.WriteLine("Você adicionou {0} alunos", contador);
                     break;
                 case 2:
                     //edita aluno
