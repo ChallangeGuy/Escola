@@ -22,7 +22,6 @@ namespace ConsoleApp55
             Console.Write("Nota: ");
             int nota = int.Parse(Console.ReadLine());
             Aluno a = new Aluno(nome, cpf, dataNascimento, endereco, nota);
-            Console.WriteLine("MATRÍCULA Nº {0}", a._matricula += 1);
             listaAluno.Add(a);
         }
         public void editAluno(int index)
@@ -41,16 +40,16 @@ namespace ConsoleApp55
                         break;
                     case 2:
                     listaAluno[index]._cpf = Console.ReadLine();
-                    break;
+                        break;
                     case 3:
                     listaAluno[index]._dataNascimento = Console.ReadLine();
-                    break;
+                        break;
                     case 4:
                     listaAluno[index]._endereco = Console.ReadLine();
-                    break;
+                        break;
                     case 5:
                     listaAluno[index]._nota = int.Parse(Console.ReadLine());
-                    break;
+                        break;
                     case 9:
 
                         break;
@@ -58,6 +57,37 @@ namespace ConsoleApp55
                     Environment.Exit(0);
                         break;
                 }
+        }
+        public void listarAlunos()
+        {
+            foreach (Aluno a in listaAluno)
+            {
+                Console.WriteLine(a._nome);
+            }
+        }
+        public void excluiAluno(int index)
+        {
+            Console.WriteLine("Aluno: " + listaAluno[index]._nome);
+            Console.WriteLine("CPF: " + listaAluno[index]._cpf);
+            Console.WriteLine("Data de Nascimento: " + listaAluno[index]._dataNascimento);
+            Console.WriteLine("Endereço: " + listaAluno[index]._endereco);
+            Console.WriteLine("Nota: " + listaAluno[index]._nota);
+
+            Console.WriteLine("Tem certeza que deseja excluir?\n[1] para Sim\n[0] para Não");
+            int opcao = int.Parse(Console.ReadLine());
+            if (opcao == 1)
+            {
+                listaAluno.RemoveAt(index);
+            }
+            Console.WriteLine("Alunos registrados");
+            foreach (Aluno a in listaAluno)
+            {
+                Console.WriteLine(a._nome);
+            }
+            if (opcao == 0)
+            {
+                excluiAluno(index);
+            }
         }
     }
 }

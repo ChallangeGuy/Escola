@@ -36,7 +36,7 @@ namespace ConsoleApp55
         {
             
             Console.Clear();
-            Console.WriteLine("[1] para Adicionar\n[2] para Editar\n[3] para Listar\n[4] para Excluir\n[0] para Sair");
+            Console.WriteLine("[1] para Adicionar\n[2] para Editar\n[3] para Listar\n[4] para Excluir\n\n[0] para Sair");
             int opcao = int.Parse(Console.ReadLine());
             switch (opcao)
             {
@@ -47,7 +47,7 @@ namespace ConsoleApp55
                     {
                         Console.Clear();
                         opr.addAluno();
-                        Console.WriteLine("\nDeseja adicionar mais um aluno?\n[1] para Sim\n[0] para Não");
+                        Console.WriteLine("\nDeseja adicionar mais um aluno?\n[1] para Sim\n\n[0] para Não");
                         opcao = int.Parse(Console.ReadLine());
                         contador++;
                     }
@@ -66,9 +66,14 @@ namespace ConsoleApp55
                     break;
                 case 3:
                     //lista aluno
+                    opr.listarAlunos();
                     break;
                 case 4:
                     //exclui aluno
+                    Console.Clear();
+                    Console.Write("Digite a Matrícula do aluno que deseja excluir: ");
+                    int matricula2 = int.Parse(Console.ReadLine());
+                    opr.excluiAluno(matricula2 - 1);
                     break;
                 case 0:
                     Environment.Exit(0);
