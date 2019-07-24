@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp55
+{
+    class Operações
+    {
+        public List<Aluno> listaAluno = new List<Aluno>();
+        public void addAluno()
+        {
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+            Console.Write("CPF: ");
+            string cpf = Console.ReadLine();
+            Console.Write("Data de Nascimeto: ");
+            string dataNascimento = Console.ReadLine();
+            Console.Write("Endereço: ");
+            string endereco = Console.ReadLine();
+            Console.Write("Nota: ");
+            int nota = int.Parse(Console.ReadLine());
+            Aluno a = new Aluno(nome, cpf, dataNascimento, endereco, nota);
+            Console.WriteLine("MATRÍCULA Nº {0}", a._matricula += 1);
+            listaAluno.Add(a);
+        }
+        public void editAluno(int index)
+        {
+            Console.WriteLine("Aluno: " + listaAluno[index]._nome);
+            Console.WriteLine("CPF: " + listaAluno[index]._cpf);
+            Console.WriteLine("Data de Nascimento: " + listaAluno[index]._dataNascimento);
+            Console.WriteLine("Endereço: " + listaAluno[index]._endereco);
+            Console.WriteLine("Nota: " + listaAluno[index]._nota);
+            Console.Write("\nO que voce quer alterar?\n[1] para Nome\n[2] para CPF\n[3] para Data de Nascimento\n[4] para Endereço\n[5] para Nota\n\n[9] para retornar\n\n[0] para Sair");
+                int opcao = int.Parse(Console.ReadLine());
+                switch (opcao)
+                {
+                    case 1:
+                    listaAluno[index]._nome = Console.ReadLine();
+                        break;
+                    case 2:
+                    listaAluno[index]._cpf = Console.ReadLine();
+                    break;
+                    case 3:
+                    listaAluno[index]._dataNascimento = Console.ReadLine();
+                    break;
+                    case 4:
+                    listaAluno[index]._endereco = Console.ReadLine();
+                    break;
+                    case 5:
+                    listaAluno[index]._nota = int.Parse(Console.ReadLine());
+                    break;
+                    case 9:
+
+                        break;
+                    case 0:
+                    Environment.Exit(0);
+                        break;
+                }
+        }
+    }
+}

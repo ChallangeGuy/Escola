@@ -31,8 +31,10 @@ namespace ConsoleApp55
                     break;
             }
         }
+        Operações opr = new Operações();
         public void menuAluno()
         {
+            
             Console.Clear();
             Console.WriteLine("[1] para Adicionar\n[2] para Editar\n[3] para Listar\n[4] para Excluir\n[0] para Sair");
             int opcao = int.Parse(Console.ReadLine());
@@ -40,21 +42,27 @@ namespace ConsoleApp55
             {
                 case 1:
                     //adiciona aluno
-                    Adicionar adc = new Adicionar();
                     int contador = 0;
                     while (opcao != 0)
                     {
                         Console.Clear();
-                        adc.addAluno();
-                        Console.Clear();
-                        Console.WriteLine("Deseja adicionar mais um aluno?\n[1] para Sim\n[0] para Não");
+                        opr.addAluno();
+                        Console.WriteLine("\nDeseja adicionar mais um aluno?\n[1] para Sim\n[0] para Não");
                         opcao = int.Parse(Console.ReadLine());
                         contador++;
                     }
                     Console.WriteLine("Você adicionou {0} alunos", contador);
+                    Console.ReadLine();
+                    Console.Clear();
+                    menuAluno();
                     break;
                 case 2:
                     //edita aluno
+                    Console.Clear();
+                    Console.Write("Digite a Matrícula do aluno que deseja alterar: ");
+                    int matricula = int.Parse(Console.ReadLine());
+                    opr.editAluno(matricula - 1);
+
                     break;
                 case 3:
                     //lista aluno

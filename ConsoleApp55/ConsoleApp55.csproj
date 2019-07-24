@@ -43,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adicionar.cs" />
+    <Compile Include="Operações.cs" />
     <Compile Include="Aluno.cs" />
-    <Compile Include="Editar.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
