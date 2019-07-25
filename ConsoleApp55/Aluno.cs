@@ -23,6 +23,16 @@ namespace ConsoleApp55
             _dataNascimento = dataNascimento;
             _endereco = endereco;
             _nota = nota;
+
+        }
+        public Cursos alunoCursos()
+        {
+            Operações_Cursos oprCursos = new Operações_Cursos();
+            string nomeCurso = oprCursos.nome;
+            double notaCurso = oprCursos.nota;
+            string codigoCurso = oprCursos.codigo;
+            Cursos curso = new Cursos(nomeCurso, notaCurso, codigoCurso);
+            return curso.exibeCurso();
         }
     }
 }

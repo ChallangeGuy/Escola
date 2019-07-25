@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Operações.cs" />
+    <Compile Include="Cursos.cs" />
+    <Compile Include="Operações_Aluno.cs" />
     <Compile Include="Aluno.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Operações_Cursos.cs" />
+    <Compile Include="Operações_Professor.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

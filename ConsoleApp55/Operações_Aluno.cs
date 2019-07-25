@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp55
 {
-    class Operações
+    class Operações_Aluno
     {
         public List<Aluno> listaAluno = new List<Aluno>();
         public void addAluno()
