@@ -16,16 +16,17 @@ namespace ConsoleApp55
         public string _cursos { get; set; }
         public string _endereco { get; set; }
         public int _nota { get; set; }
-        public Aluno(string nome, string cpf, string dataNascimento, string endereco, int nota)
+        public Aluno(string nome, string cpf, string dataNascimento, int matricula, string endereco, int nota)
         {
             _nome = nome;
             _cpf = cpf;
             _dataNascimento = dataNascimento;
+            _matricula = matricula;
             _endereco = endereco;
             _nota = nota;
 
         }
-        public Cursos alunoCursos()
+        /*public Cursos alunoCursos()
         {
             Operações_Cursos oprCursos = new Operações_Cursos();
             string nomeCurso = oprCursos.nome;
@@ -33,6 +34,6 @@ namespace ConsoleApp55
             string codigoCurso = oprCursos.codigo;
             Cursos curso = new Cursos(nomeCurso, notaCurso, codigoCurso);
             return curso.exibeCurso();
-        }
+        }*/
     }
 }

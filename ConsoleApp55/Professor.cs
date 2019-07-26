@@ -15,13 +15,14 @@ namespace ConsoleApp55
         public string _turmas { get; set; }
         public double _salario { get; set; }
         public string _dataAdmissao { get; set; }
-        public Professor(string nome, string cpf, string dataNascimento, double salario, string dataAdmissao)
+        public Professor(string nome, string cpf, string dataNascimento, int matricula, double salario, string dataAdmissao)
         {
             _nome = nome;
             _cpf = cpf;
             _dataNascimento = dataNascimento;
             _salario = salario;
             _dataAdmissao = dataAdmissao;
+            _matricula = matricula;
         }
     }
 }

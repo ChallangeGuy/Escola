@@ -9,7 +9,7 @@ namespace ConsoleApp55
     class Operações_Professor
     {
         public List<Professor> listaProfessor = new List<Professor>();
-        public void addProfessor()
+        public void addProfessor(int matricula)
         {
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace ConsoleApp55
             double salario = double.Parse(Console.ReadLine());
             Console.Write("Data de Admissão ");
             string dataAdmissao = Console.ReadLine();
-            Professor p = new Professor(nome, cpf, dataNascimento, salario, dataAdmissao);
+            Professor p = new Professor(nome, cpf, dataNascimento, matricula, salario, dataAdmissao);
             listaProfessor.Add(p);
         }
         public void editProfessor(int index)

@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp55
 {
-    class Cursos
+    class Turmas
     {
-        public string _nome{ get; set; }
-        public string _turmas { get; set; }
-        public double _notaEnad { get; set; }
+        public string _nome { get; set; }
         public string _codigo { get; set; }
-        public Cursos(string nome, double notaEnad, string codigo)
+        public Turmas(string nome, string codigo, List<Aluno> a, List<Professor> p, List<Cursos> c)
         {
             _nome = nome;
-            _notaEnad = notaEnad;
             _codigo = codigo;
         }
     }

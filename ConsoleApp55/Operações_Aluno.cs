@@ -9,7 +9,7 @@ namespace ConsoleApp55
     class Operações_Aluno
     {
         public List<Aluno> listaAluno = new List<Aluno>();
-        public void addAluno()
+        public void addAluno(int matricula)
         {
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace ConsoleApp55
             string endereco = Console.ReadLine();
             Console.Write("Nota: ");
             int nota = int.Parse(Console.ReadLine());
-            Aluno a = new Aluno(nome, cpf, dataNascimento, endereco, nota);
+            Aluno a = new Aluno(nome, cpf, dataNascimento, matricula, endereco, nota);
             listaAluno.Add(a);
         }
         public void editAluno(int index)
@@ -51,8 +51,8 @@ namespace ConsoleApp55
                     listaAluno[index]._nota = int.Parse(Console.ReadLine());
                         break;
                     case 9:
-
-                        break;
+                    Console.Clear();
+                    break;
                     case 0:
                     Environment.Exit(0);
                         break;
