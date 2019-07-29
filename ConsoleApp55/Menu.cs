@@ -11,6 +11,9 @@ namespace ConsoleApp55
         Operações_Aluno opr = new Operações_Aluno();
         Operações_Professor oprProf = new Operações_Professor();
         Operações_Cursos oprCursos = new Operações_Cursos();
+        public Menu()
+        {
+        }
         public void menuPrincipal()
         {
             Console.WriteLine("Digite a opção desejada: \n[1] para Alunos\n[2] para Professores\n[3] para Cursos\n[4] para Turma\n\n[0] para Sair");

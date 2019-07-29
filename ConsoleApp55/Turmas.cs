@@ -10,7 +10,7 @@ namespace ConsoleApp55
     {
         public string _nome { get; set; }
         public string _codigo { get; set; }
-        public Turmas(string nome, string codigo, List<Aluno> a, List<Professor> p, List<Cursos> c)
+        public Turmas(string nome, string codigo)
         {
             _nome = nome;
             _codigo = codigo;

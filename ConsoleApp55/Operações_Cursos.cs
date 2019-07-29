@@ -9,6 +9,9 @@ namespace ConsoleApp55
     class Operações_Cursos
     {
         public List<Cursos> listaCursos = new List<Cursos>();
+        public Operações_Cursos()
+        {
+        }
         public string nome;
         public double nota;
         public string codigo;

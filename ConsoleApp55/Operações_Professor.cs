@@ -9,6 +9,9 @@ namespace ConsoleApp55
     class Operações_Professor
     {
         public List<Professor> listaProfessor = new List<Professor>();
+        public Operações_Professor()
+        {
+        }
         public void addProfessor(int matricula)
         {
             Console.Write("Nome: ");

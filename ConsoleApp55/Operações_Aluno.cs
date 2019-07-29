@@ -8,7 +8,10 @@ namespace ConsoleApp55
 {
     class Operações_Aluno
     {
-        public List<Aluno> listaAluno = new List<Aluno>();
+        List<Aluno> listaAluno = new List<Aluno>();
+        public Operações_Aluno()
+        {
+        }
         public void addAluno(int matricula)
         {
             Console.Write("Nome: ");
