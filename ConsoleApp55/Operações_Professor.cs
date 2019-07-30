@@ -29,20 +29,20 @@ namespace ConsoleApp55
         }
         public void editProfessor(int index)
         {
-            Console.WriteLine("Aluno: " + listaProfessor[index]._nome);
-            Console.WriteLine("CPF: " + listaProfessor[index]._cpf);
+            Console.WriteLine("Aluno: " + listaProfessor[index].Nome);
+            Console.WriteLine("CPF: " + listaProfessor[index].Cpf);
             Console.WriteLine("Data de Nascimento: " + listaProfessor[index]._dataNascimento);
             Console.WriteLine("Salario: " + listaProfessor[index]._salario);
-            Console.WriteLine("Data de Admissão: " + listaProfessor[index]._dataAdmissao);
+            Console.WriteLine("Data de Admissão: " + listaProfessor[index].DataAdmissao);
             Console.Write("\nO que voce quer alterar?\n[1] para Nome\n[2] para CPF\n[3] para Data de Nascimento\n[4] para Salario\n[5] para Data de Admissão\n\n[9] para retornar\n\n[0] para Sair");
             int opcao = int.Parse(Console.ReadLine());
             switch (opcao)
             {
                 case 1:
-                    listaProfessor[index]._nome = Console.ReadLine();
+                    listaProfessor[index].Nome = Console.ReadLine();
                     break;
                 case 2:
-                    listaProfessor[index]._cpf = Console.ReadLine();
+                    listaProfessor[index].Cpf = Console.ReadLine();
                     break;
                 case 3:
                     listaProfessor[index]._dataNascimento = Console.ReadLine();
@@ -51,7 +51,7 @@ namespace ConsoleApp55
                     listaProfessor[index]._salario = double.Parse(Console.ReadLine());
                     break;
                 case 5:
-                    listaProfessor[index]._dataAdmissao = Console.ReadLine();
+                    listaProfessor[index].DataAdmissao = Console.ReadLine();
                     break;
                 case 9:
 
@@ -65,16 +65,16 @@ namespace ConsoleApp55
         {
             foreach (Professor p in listaProfessor)
             {
-                Console.WriteLine(p._nome);
+                Console.WriteLine(p.Nome);
             }
         }
         public void excluiProfessor(int index)
         {
-            Console.WriteLine("Aluno: " + listaProfessor[index]._nome);
-            Console.WriteLine("CPF: " + listaProfessor[index]._cpf);
+            Console.WriteLine("Aluno: " + listaProfessor[index].Nome);
+            Console.WriteLine("CPF: " + listaProfessor[index].Cpf);
             Console.WriteLine("Data de Nascimento: " + listaProfessor[index]._dataNascimento);
             Console.WriteLine("Salario: " + listaProfessor[index]._salario);
-            Console.WriteLine("Data de Admissão: " + listaProfessor[index]._dataAdmissao);
+            Console.WriteLine("Data de Admissão: " + listaProfessor[index].DataAdmissao);
 
             Console.WriteLine("Tem certeza que deseja excluir?\n[1] para Sim\n[0] para Não");
             int opcao = int.Parse(Console.ReadLine());
@@ -85,7 +85,7 @@ namespace ConsoleApp55
             Console.WriteLine("Alunos registrados");
             foreach (Professor p in listaProfessor)
             {
-                Console.WriteLine(p._nome);
+                Console.WriteLine(p.Nome);
             }
             if (opcao == 0)
             {

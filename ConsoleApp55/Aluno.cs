@@ -7,23 +7,25 @@ using System.Threading.Tasks;
 namespace ConsoleApp55
 {
 
-    class Aluno
+    public class Aluno
     {
-        public string _nome { get; set; }
-        public string _cpf { get; set; }
-        public string _dataNascimento { get; set; }
-        public int _matricula { get; set; }
-        public string _cursos { get; set; }
-        public string _endereco { get; set; }
-        public int _nota { get; set; }
-        public Aluno(string nome, string cpf, string dataNascimento, int matricula, string endereco, int nota)
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string DataNascimento { get; set; }
+        public int Matricula { get; set; }
+        public string Cursos { get; set; }
+        public string Endereco { get; set; }
+        public int Nota { get; set; }
+        public List<Turma> Turmas { get; set; }
+        public Aluno(string nome, string cpf, string dataNascimento, int matricula, string endereco, int nota, List<Turma> turmas)
         {
-            _nome = nome;
-            _cpf = cpf;
-            _dataNascimento = dataNascimento;
-            _matricula = matricula;
-            _endereco = endereco;
-            _nota = nota;
+            Nome = nome;
+            Cpf = cpf;
+            DataNascimento = dataNascimento;
+            Matricula = matricula;
+            Endereco = endereco;
+            Nota = nota;
+            Turmas = turmas;
 
         }
         /*public Cursos alunoCursos()

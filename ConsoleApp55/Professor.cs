@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp55
 {
-    class Professor
+    public class Professor
     {
-        public string _nome { get; set; }
-        public string _cpf { get; set; }
-        public string _dataNascimento { get; set; }
-        public int _matricula { get; set; }
-        public string _turmas { get; set; }
-        public double _salario { get; set; }
-        public string _dataAdmissao { get; set; }
-        public Professor(string nome, string cpf, string dataNascimento, int matricula, double salario, string dataAdmissao)
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string DataNascimento { get; set; }
+        public int Matricula { get; set; }
+        public double Salario { get; set; }
+        public string DataAdmissao { get; set; }
+        public List<Turma> Turmas { get; set; }
+        public Professor()
         {
-            _nome = nome;
-            _cpf = cpf;
-            _dataNascimento = dataNascimento;
-            _salario = salario;
-            _dataAdmissao = dataAdmissao;
-            _matricula = matricula;
+            this.Turmas = new List<Turma>();
+        }
+        public Professor(string nome, string cpf, string dataNascimento, int matricula, double salario, string dataAdmissao, List<Turma> turmas)
+        {
+            Nome = nome;
+            Cpf = cpf;
+            DataNascimento = dataNascimento;
+            Salario = salario;
+            DataAdmissao = dataAdmissao;
+            Matricula = matricula;
+            Turmas = turmas;
         }
     }
 }

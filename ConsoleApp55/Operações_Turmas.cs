@@ -8,18 +8,22 @@ namespace ConsoleApp55
 {
     class Operações_Turmas
     {
-        Turmas t;
-        List<Turmas> listaTurmas = new List<Turmas>();
+        Turma t;
+        List<Turma> listaTurmas = new List<Turma>();
         public Operações_Turmas()
         {
         }
         public void addAluno(int matricula)
         {
+            //Turma turma = new Turma();
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
-            Console.Write("CPF: ");
+            Console.Write("Código: ");
             string codigo = Console.ReadLine();
-            Turmas t = new Turmas(nome, codigo);
+
+            var alunos = Operações_Aluno._listaAluno;
+            
+            Turma t = new Turma(nome, codigo, List<);
             listaTurmas.Add(t);
         }
         public void editAluno(int index)
@@ -46,7 +50,7 @@ namespace ConsoleApp55
         }
         public void listarAlunos()
         {
-            foreach (Turmas t in listaTurmas)
+            foreach (Turma t in listaTurmas)
             {
                 Console.WriteLine(t._nome);
             }
@@ -63,7 +67,7 @@ namespace ConsoleApp55
                 listaTurmas.RemoveAt(index);
             }
             Console.WriteLine("Alunos registrados");
-            foreach (Turmas t in listaTurmas)
+            foreach (Turma t in listaTurmas)
             {
                 Console.WriteLine(t._nome);
             }

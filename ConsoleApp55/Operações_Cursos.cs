@@ -8,7 +8,7 @@ namespace ConsoleApp55
 {
     class Operações_Cursos
     {
-        public List<Cursos> listaCursos = new List<Cursos>();
+        public List<Curso> listaCursos = new List<Curso>();
         public Operações_Cursos()
         {
         }
@@ -23,26 +23,26 @@ namespace ConsoleApp55
             nota = double.Parse(Console.ReadLine());
             Console.Write("Código ");
             codigo = Console.ReadLine();
-            Cursos c = new Cursos(nome, nota, codigo);
+            Curso c = new Curso(nome, nota, codigo);
             listaCursos.Add(c);
         }
         public void editCursos(int index)
         {
-            Console.WriteLine("Aluno: " + listaCursos[index]._nome);
-            Console.WriteLine("CPF: " + listaCursos[index]._notaEnad);
-            Console.WriteLine("Data de Nascimento: " + listaCursos[index]._codigo);
+            Console.WriteLine("Aluno: " + listaCursos[index].Nome);
+            Console.WriteLine("CPF: " + listaCursos[index].NotaEnad);
+            Console.WriteLine("Data de Nascimento: " + listaCursos[index].Codigo);
             Console.Write("\nO que voce quer alterar?\n[1] para Nome\n[2] para Nota\n[3] para Codigo\n\n[9] para retornar\n\n[0] para Sair");
             int opcao = int.Parse(Console.ReadLine());
             switch (opcao)
             {
                 case 1:
-                    listaCursos[index]._nome = Console.ReadLine();
+                    listaCursos[index].Nome = Console.ReadLine();
                     break;
                 case 2:
-                    listaCursos[index]._notaEnad = int.Parse(Console.ReadLine());
+                    listaCursos[index].NotaEnad = int.Parse(Console.ReadLine());
                     break;
                 case 3:
-                    listaCursos[index]._codigo = Console.ReadLine();
+                    listaCursos[index].Codigo = Console.ReadLine();
                     break;
                 case 9:
                     Console.Clear();
@@ -54,16 +54,16 @@ namespace ConsoleApp55
         }
         public void listarCursos()
         {
-            foreach (Cursos c in listaCursos)
+            foreach (Curso c in listaCursos)
             {
-                Console.WriteLine("Nome do Curso: " + c._nome);
+                Console.WriteLine("Nome do Curso: " + c.Nome);
             }
         }
         public void excluiCursos(int index)
         {
-            Console.WriteLine("Aluno: " + listaCursos[index]._nome);
-            Console.WriteLine("CPF: " + listaCursos[index]._notaEnad);
-            Console.WriteLine("Data de Nascimento: " + listaCursos[index]._codigo);
+            Console.WriteLine("Aluno: " + listaCursos[index].Nome);
+            Console.WriteLine("CPF: " + listaCursos[index].NotaEnad);
+            Console.WriteLine("Data de Nascimento: " + listaCursos[index].Codigo);
             Console.WriteLine("Tem certeza que deseja excluir?\n[1] para Sim\n[0] para Não");
             int opcao = int.Parse(Console.ReadLine());
             if (opcao == 1)
@@ -71,9 +71,9 @@ namespace ConsoleApp55
                 listaCursos.RemoveAt(index);
             }
             Console.WriteLine("Alunos registrados");
-            foreach (Cursos c in listaCursos)
+            foreach (Curso c in listaCursos)
             {
-                Console.WriteLine(c._nome);
+                Console.WriteLine(c.Nome);
             }
             if (opcao == 0)
             {
