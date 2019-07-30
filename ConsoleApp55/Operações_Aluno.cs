@@ -39,22 +39,38 @@ namespace ConsoleApp55
                 switch (opcao)
                 {
                     case 1:
+                    Console.Clear();
+                    Console.WriteLine("O antigo nome é: {0}\n", listaAluno[index]._nome);
+                    Console.Write("Digite o novo nome: ");
                     listaAluno[index]._nome = Console.ReadLine();
                         break;
                     case 2:
+                    Console.Clear();
+                    Console.WriteLine("O antigo CPF é: {0}\n", listaAluno[index]._cpf);
+                    Console.Write("Digite o novo CPF: ");
                     listaAluno[index]._cpf = Console.ReadLine();
                         break;
                     case 3:
+                    Console.Clear();
+                    Console.WriteLine("A antiga data de nascimento é: {0}\n", listaAluno[index]._dataNascimento);
+                    Console.Write("Digite a nova data de nascimento: ");
                     listaAluno[index]._dataNascimento = Console.ReadLine();
                         break;
                     case 4:
+                    Console.Clear();
+                    Console.WriteLine("O antigo endereço é: {0}\n", listaAluno[index]._endereco);
+                    Console.Write("Digite o novo endereço: ");
                     listaAluno[index]._endereco = Console.ReadLine();
                         break;
                     case 5:
+                    Console.Clear();
+                    Console.WriteLine("A antiga nota é: {0}\n", listaAluno[index]._nota);
+                    Console.Write("Digite a nova nota: ");
                     listaAluno[index]._nota = int.Parse(Console.ReadLine());
                         break;
                     case 9:
                     Console.Clear();
+                    
                     break;
                     case 0:
                     Environment.Exit(0);

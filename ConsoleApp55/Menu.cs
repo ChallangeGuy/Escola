@@ -73,6 +73,7 @@ namespace ConsoleApp55
                     break;
                 case 2:
                     //edita aluno
+                    
                     Console.Clear();
                     Console.Write("Digite a Matrícula do aluno que deseja alterar: ");
                     int matricula = int.Parse(Console.ReadLine());
